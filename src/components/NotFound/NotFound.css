@@ -1,0 +1,33 @@
+.not-found-page {
+  background-color: #FFF;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.not-found-page__title {
+  color: #000;
+  font-size: 140px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 246px auto 0;
+}
+
+.not-found-page__description {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 5px auto 184px;
+}
+
+.not-found-page__link {
+  color: #3456F3;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}

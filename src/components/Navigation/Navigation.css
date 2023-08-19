@@ -1,0 +1,32 @@
+.navigation-bar {
+  margin: 0;
+}
+
+.navigation-bar__list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 16px;
+  padding-left: 63px;
+  margin: 10px;
+
+}
+
+.navigation-bar__item {
+  color: #000;
+  text-align: right;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: none;
+
+}
+
+.navigation-bar__item-active {
+  font-weight: 500;
+}
+
+.navigation-bar__item:hover{
+  opacity: 0.6;
+}
