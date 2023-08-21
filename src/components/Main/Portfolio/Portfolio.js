@@ -7,19 +7,19 @@ function Portfolio() {
       <h3 className='portfolio__title'>Портфолио</h3>
       <ul className='portfolio__links'>
         <li className='portfolio__link'>
-          <Link className='portfolio__link-name' to='https://github.com/yuli-ageeva/how-to-learn'>Статичный сайт
-            <span className='portfolio__link-icon'></span>
+          <Link className='portfolio__link-name' to='https://github.com/yuli-ageeva/how-to-learn' target="_blank">Статичный
+            сайт
           </Link>
         </li>
         <li className='portfolio__link'>
-          <Link className='portfolio__link-name' to='https://github.com/yuli-ageeva/russian-travel'>Адаптивный сайт
-            <span className='portfolio__link-icon'></span>
+          <Link className='portfolio__link-name' to='https://github.com/yuli-ageeva/russian-travel' target="_blank">Адаптивный
+            сайт
           </Link>
         </li>
         <li className='portfolio__link'>
-          <Link className='portfolio__link-name' to='https://github.com/yuli-ageeva/react-mesto-api-full-gha'>Одностраничное
+          <Link className='portfolio__link-name' to='https://github.com/yuli-ageeva/react-mesto-api-full-gha'
+                target="_blank">Одностраничное
             приложение
-            <span className='portfolio__link-icon'></span>
           </Link>
         </li>
       </ul>

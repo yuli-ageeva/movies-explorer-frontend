@@ -34,6 +34,11 @@
   line-height: normal;
   border: none;
 }
+.search-form__input:focus {
+  outline: none;
+  border: 2px solid #2BE080;
+  background-color: #f0f0f0;
+}
 
 .search-form__submit-button {
   background-color: #FFFFFF;
@@ -52,6 +57,31 @@
   cursor: pointer;
 }
 
-.search-form__submit-button:hover{
-opacity: 0.8;
+.search-form__submit-button:hover {
+  opacity: 0.8;
+}
+
+@media screen and  (max-width: 780px) {
+  .search-form {
+    padding: 68px 30px 48px;
+  }
+}
+
+@media screen and  (max-width: 400px) {
+  .search-form {
+    padding: 63px 14px 51px;
+  }
+
+  .search-form__form {
+    padding: 0;
+  }
+
+  .search-form__input {
+    font-size: 18px;
+  }
+
+  .search-form__submit-button {
+    height: 54px;
+  }
+
 }

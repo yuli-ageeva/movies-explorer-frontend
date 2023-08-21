@@ -48,6 +48,12 @@
   border: none;
 }
 
+.profile__info-input:focus {
+  outline: none;
+  border: 2px solid #2BE080;
+  background-color: #f0f0f0;
+}
+
 .profile__info:last-of-type {
   border-bottom: none;
 }
@@ -76,12 +82,50 @@
 .profile__link-exit {
   color: #FF3055;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .profile__link-exit :hover {
   opacity: 0.7;
 }
 
-.profile__link:hover{
+.profile__link:hover {
   opacity: 0.7;
+}
+
+@media screen  and (max-width: 780px) {
+  .profile {
+    padding: 233px 0 70px;
+  }
+
+  .profile__form {
+    margin: 95px auto 0;
+  }
+
+  .profile__links {
+    margin: 194px 0 0;
+  }
+}
+
+@media screen  and (max-width: 520px) {
+  .profile {
+    max-width: 260px;
+    padding: 68px 0 70px;
+  }
+
+  .profile__form {
+    margin: 78px auto 0;
+  }
+
+  .profile__links {
+    margin: 194px 0 0;
+  }
+
+  .profile__links {
+    margin: 361px 0 0;
+  }
+
+  .profile__link {
+    font-size: 12px;
+  }
 }

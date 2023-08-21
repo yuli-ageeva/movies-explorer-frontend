@@ -31,3 +31,25 @@
   line-height: normal;
   text-decoration: none;
 }
+
+@media screen  and (max-width: 780px) {
+  .not-found-page__title {
+    margin: 408px auto 0;
+  }
+}
+
+@media screen  and (max-width: 520px) {
+  .not-found-page__title {
+    margin: 329px auto 0;
+    font-size: 80px;
+  }
+
+  .not-found-page__description {
+    font-size: 12px;
+    margin: 10px auto 285px;
+  }
+
+  .not-found-page__link {
+    font-size: 12px;
+  }
+}

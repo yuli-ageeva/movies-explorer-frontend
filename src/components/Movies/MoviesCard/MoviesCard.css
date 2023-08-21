@@ -11,6 +11,7 @@
   height: 151px;
 }
 
+
 .movies-card__description {
   margin-top: 14px;
   display: flex;
@@ -64,4 +65,16 @@
   background-color: #F9F9F9;
   border-radius: 50%;
   background-image: url("../../../images/delete.svg");
+}
+
+@media screen and  (max-width: 780px) {
+  .movies-card__image {
+    height: 190px;
+  }
+}
+
+@media screen and  (max-width: 500px) {
+  .movies-card__image {
+    height: 168px;
+  }
 }

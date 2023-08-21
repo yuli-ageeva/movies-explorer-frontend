@@ -1,0 +1,53 @@
+.user-account {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 32px;
+  border-radius: 40px;
+  background-color: #FFF;
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.08);
+  margin-top: 4px;
+}
+
+.user-account:hover {
+  opacity: 0.7;
+}
+
+.user-account__logo {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+.user-account__icon {
+  margin-left: 7px;
+  background-image: url("../../images/profile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 26px;
+  height: 26px;
+  background-color: #F9F9F9;
+  border-radius: 50%;
+}
+
+@media screen  and (max-width: 768px) {
+  .user-account {
+    margin-top: 593px;
+  }
+
+  .user-account__logo {
+    margin-left: 10px;
+  }
+}
+
+@media screen  and (max-width: 520px) {
+  .user-account {
+    margin-top: 410px;
+  }
+}

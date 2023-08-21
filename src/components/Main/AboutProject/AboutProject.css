@@ -50,7 +50,7 @@
 
 .project__timeline {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: minmax(140px, 1fr) 4fr
 }
 
 .project__timeline-item {
@@ -81,4 +81,73 @@
 
 .project__timeline-time_frontend {
   background-color: #F2F2F2;
+}
+
+@media screen and (max-width: 1070px) {
+  .project {
+    padding: 90px 50px;
+  }
+
+  .project__info {
+    gap: 38px;
+  }
+
+  .project__info-description {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .project__info-item {
+    gap: 20px
+  }
+
+  .project__info-item {
+    margin: 0 0 94px;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .project {
+    padding: 70px 18px;
+  }
+
+  .project__title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    padding-bottom: 28px;
+  }
+
+  .project__info {
+    flex-direction: column;
+    gap: 56px;
+    margin-top: 60px;
+  }
+
+  .project__info-title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .project__info-description {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .project__info-item {
+    margin-bottom: 0;
+    gap: 16px;
+  }
+
+  .project__timeline {
+    margin-top: 60px;
+    grid-template-columns: minmax(100px, 1fr) 2fr
+  }
+
+  .project__timeline-time {
+    font-size: 11px;
+  }
+
+  .project__timeline-description {
+    font-size: 11px;
+  }
 }
