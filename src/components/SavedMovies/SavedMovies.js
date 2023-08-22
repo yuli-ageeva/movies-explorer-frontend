@@ -9,7 +9,7 @@ function SavedMovies({isAuthPage}) {
   return (
     <>
       <Header isAuthPage={true}/>
-      <main>
+      <main className='save-movies-page'>
         <SearchForm/>
         <MoviesCardList movies={movies}/>
       </main>

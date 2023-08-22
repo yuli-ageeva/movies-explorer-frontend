@@ -13,17 +13,15 @@ import Register from "../Register/Register";
 function App() {
   return (
     <div className="root">
-      <div className="root__content">
-        <Routes>
-          <Route path="/" element={<Main isAuthPage={false}/>}/>
-          <Route path="/movies" element={<Movies isAuthPage={true}/>}/>
-          <Route path="/saved-movies" element={<SavedMovies isAuthPage={true}/>}/>
-          <Route path="/profile" element={<Profile isAuthPage={true}/>}/>
-          <Route path="/signin" element={<Login/>}/>
-          <Route path="/signup" element={<Register/>}/>
-          <Route path="/*" element={<NotFound/>}></Route>
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Main isAuthPage={false}/>}/>
+        <Route path="/movies" element={<Movies isAuthPage={true}/>}/>
+        <Route path="/saved-movies" element={<SavedMovies isAuthPage={true}/>}/>
+        <Route path="/profile" element={<Profile isAuthPage={true}/>}/>
+        <Route path="/signin" element={<Login/>}/>
+        <Route path="/signup" element={<Register/>}/>
+        <Route path="/*" element={<NotFound/>}></Route>
+      </Routes>
     </div>
   )
 }

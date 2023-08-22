@@ -1,6 +1,6 @@
 .header-auth {
   background-color: #FFF;
-  margin: 0 auto;
+  margin: 0;
   padding: 18px 70px;
 }
 
@@ -23,6 +23,9 @@
   cursor: pointer;
 }
 
+.header-auth__logo:hover {
+  opacity: 0.7;
+}
 
 .header-auth__burger-icon {
   background-image: url("../../images/burger.svg");
@@ -33,6 +36,10 @@
   cursor: pointer;
   background-color: inherit;
   border: none;
+}
+
+.header-auth__burger-icon:hover {
+  opacity: 0.7;
 }
 
 @media screen and  (max-width: 780px) {

@@ -13,6 +13,10 @@
   cursor: pointer;
 }
 
+.login-form__logo:hover {
+  opacity: 0.7;
+}
+
 .login-form__title {
   color: #000;
   font-size: 24px;
@@ -25,9 +29,13 @@
 .login-form__form {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+}
+
+.login-form__form-items {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
   height: 266px;
-  margin-bottom: 68px;
 }
 
 .login-form__field {
@@ -35,6 +43,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 .login-form__field-name {
   color: #A0A0A0;
@@ -76,6 +85,7 @@
   flex-direction: column;
   gap: 16px;
   align-items: center;
+  margin: 68px 0 0;
 }
 
 .login-form__button {
@@ -137,6 +147,10 @@
   .login-form__form {
     gap: 28px
   }
+
+  .login-form__form-items {
+    height: 240px;
+  }
 }
 
 @media screen  and (max-width: 520px) {
@@ -145,6 +159,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .login-form__buttons {
+    margin: 155px 0 0;
   }
 
   .login-form__button {

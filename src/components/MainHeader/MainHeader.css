@@ -1,6 +1,6 @@
 .header {
   background-color: #073042;
-  margin: 0 auto;
+  margin: 0;
   padding: 18px 70px;
   display: flex;
   justify-content: space-between;
@@ -12,6 +12,11 @@
   height: 38px;
   background-image: url(../../images/logo.svg);
   background-position: center;
+  cursor: pointer;
+}
+
+.header__logo:hover {
+  opacity: 0.7;
 }
 
 .header__navigate {

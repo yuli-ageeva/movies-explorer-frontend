@@ -1,6 +1,6 @@
 .movies-card-list {
   background-color: #FFFFFF;
-  padding: 70px 70px 0;
+  padding: 70px 70px 80px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
 }
 
 .movies-card-list__more-button {
-  margin: 50px auto 80px;
+  margin: 58px auto 0px;
   background-color: #F9F9F9;
   border: none;
   border-radius: 6px;
@@ -38,7 +38,7 @@
 
 @media screen and  (max-width: 780px) {
   .movies-card-list {
-    padding: 82px 30px 0;
+    padding: 82px 30px 80px;
   }
 
   .movies-card-list__container {
@@ -49,7 +49,7 @@
 
 @media screen and  (max-width: 400px) {
   .movies-card-list {
-    padding: 40px 10px 0;
+    padding: 40px 10px 80px;
   }
 
   .movies-card-list__container {
@@ -59,6 +59,6 @@
 
   .movies-card-list__more-button {
     width: 240px;
-    margin: 57px auto 80px;
+    margin: 57px auto 0;
   }
 }

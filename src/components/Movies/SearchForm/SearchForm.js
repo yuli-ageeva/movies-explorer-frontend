@@ -11,8 +11,8 @@ function SearchForm() {
             className="search-form__submit-button" type="submit" aria-label="Поиск">Найти
           </button>
         </div>
+        <FilterCheckbox/>
       </form>
-      <FilterCheckbox/>
     </section>
   );
 }

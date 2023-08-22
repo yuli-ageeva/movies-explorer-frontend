@@ -22,7 +22,7 @@ function MoviesCardList({movies, isLoading, isSavedMovies}) {
             )}
           </div>
           {location.pathname === '/movies' && (
-            <button className='movies-card-list__more-button'>Еще</button>
+            <button className='movies-card-list__more-button' type='button'>Еще</button>
           )}
         </>
       )}

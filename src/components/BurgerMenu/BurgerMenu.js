@@ -10,16 +10,14 @@ function BurgerMenu({isOpen, onClose}) {
     <>
       <div className={`burger-menu ${isOpen ? 'burger-menu_open' : ''}`}>
         <div className="burger-menu__content">
-          <button className="burger-menu__close-button" onClick={onClose}>
-            <div className="burger-menu__close-icon"></div>
+          <button className="burger-menu__close-button" type='button' onClick={onClose}>
+            <span className="burger-menu__close-icon"></span>
           </button>
           <ul className="burger-menu__items">
             <li className="burger-menu__item">
               <NavLink
-                exact
                 to="/"
                 className="burger-menu__link"
-                activeClassName="burger-menu__link_active"
                 onClick={onClose}
               >
                 Главная

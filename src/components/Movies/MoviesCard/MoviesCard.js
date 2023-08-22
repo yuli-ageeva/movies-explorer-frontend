@@ -42,12 +42,9 @@ function MoviesCard({movie}) {
     >
       <img className="movies-card__image" src={movie.image} alt={movie.nameRU}/>
       <div className="movies-card__description">
-        <h3 className="movies-card__description-name">{movie.nameRU}</h3>
+        <h2 className="movies-card__description-name">{movie.nameRU}</h2>
         <div className="movies-card__save">
-          <button
-            className={cardButtonClassName}
-            type="button"
-            onClick={handleLikeClick}
+          <button className={cardButtonClassName} type="button" onClick={handleLikeClick}
           ></button>
         </div>
       </div>

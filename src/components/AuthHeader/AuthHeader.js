@@ -26,26 +26,28 @@ function AuthHeader() {
 
   return (
     <header className="header-auth">
-      <ul className="header-auth__bar">
-        <li>
-          <NavLink className="header-auth__logo" title="На главную" to="/"/>
-        </li>
-        {isMobile ? (
-          <li onClick={toggleMobileMenu}>
-            <button className="header-auth__burger-icon"></button>
+      <nav>
+        <ul className="header-auth__bar">
+          <li>
+            <NavLink className="header-auth__logo" title="На главную" to="/"/>
           </li>
-        ) : (
-          <>
-            <li>
-              <Navigation/>
+          {isMobile ? (
+            <li onClick={toggleMobileMenu}>
+              <button className="header-auth__burger-icon" type='button'></button>
             </li>
-            <li className="header-auth__user">
-              <AccountLogo></AccountLogo>
-            </li>
-          </>
-        )}
-      </ul>
-      <BurgerMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu}/>
+          ) : (
+            <>
+              <li>
+                <Navigation/>
+              </li>
+              <li className="header-auth__user">
+                <AccountLogo></AccountLogo>
+              </li>
+            </>
+          )}
+        </ul>
+        <BurgerMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu}/>
+      </nav>
     </header>
   );
 }

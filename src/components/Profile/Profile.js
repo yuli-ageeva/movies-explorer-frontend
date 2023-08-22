@@ -8,25 +8,24 @@ function Profile() {
       <Header></Header>
       <main>
         <section className='profile'>
-          <h2 className='profile__title'>Привет, Юля!</h2>
+          <h1 className='profile__title'>Привет, Юля!</h1>
           <form className='profile__form'>
             <label className='profile__info'>
               <span className='profile__info-description'>Имя</span>
-              <input className='profile__info-input' id='name-input' type='text' name='name' placeholder='Имя'
-                     value='Юля'
+              <input className='profile__info-input' id='name-input' type='text' name='name' minLength='2'
+                     maxLength='30' placeholder='Имя'
+                     defaultValue='Юля'
                      required/>
             </label>
             <label className='profile__info'>
               <span className='profile__info-description'>E-mail</span>
               <input className='profile__info-input' id='email-input' type='email' name='email' placeholder='Почта'
-                     value='pochta@yandex.ru'
+                     defaultValue='pochta@yandex.ru'
                      required/>
             </label>
+            <button className='profile__link' type='submit'>Редактировать</button>
           </form>
-          <div className='profile__links'>
-            <button className='profile__link'>Редактировать</button>
-            <Link className='profile__link profile__link-exit' to='/'>Выйти из аккаунта</Link>
-          </div>
+          <Link className='profile__link-exit' to='/'>Выйти из аккаунта</Link>
         </section>
       </main>
 
