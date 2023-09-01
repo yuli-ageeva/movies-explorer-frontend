@@ -7,19 +7,19 @@ import Portfolio from "./Portfolio/Portfolio";
 import Footer from "../Footer/Footer";
 
 function Main() {
-  return (
-    <>
-      <Header isAuthPage={false}/>
-      <main>
-        <Promo/>
-        <AboutProject/>
-        <Techs/>
-        <AboutMe/>
-        <Portfolio/>
-      </main>
-      <Footer/>
-    </>
-  );
+    return (
+        <>
+            <Header />
+            <main>
+                <Promo/>
+                <AboutProject/>
+                <Techs/>
+                <AboutMe/>
+                <Portfolio/>
+            </main>
+            <Footer/>
+        </>
+    );
 }
 
 export default Main;
