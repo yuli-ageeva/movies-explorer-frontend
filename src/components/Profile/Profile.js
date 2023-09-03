@@ -87,7 +87,7 @@ function Profile({handleLogout, onUserUpdate}) {
             <Header></Header>
             <main>
                 <section className='profile'>
-                    <h1 className='profile__title'>Привет,{currentUser.name}!</h1>
+                    <h1 className='profile__title'>Привет, {currentUser.name}!</h1>
                     <form className='profile__form'>
                         <label className='profile__info'>
                             <div className='profile__info-box'>

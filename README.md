@@ -1,6 +1,6 @@
 # Верстка fronted-части проекта movies-explorer
 
-ссылка на PR 
+ссылка на PR https://github.com/yuli-ageeva/movies-explorer-frontend/pull/2
 
 ссылка на проект https://yuliaageeva.nomoreparties.co
 
