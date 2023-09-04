@@ -69,13 +69,13 @@
     background-image: url('../../../images/save.svg');
 }
 
-.movies-card__button-delete {
+.movies-card__button-delete_hidden {
     background-image: none;
     background-color: #FFF;
     border-radius: 50%;
 }
 
-.movies-card__button-delete_hover {
+.movies-card__button-delete_shown {
     background-color: #F9F9F9;
     border-radius: 50%;
     background-image: url("../../../images/delete.svg");

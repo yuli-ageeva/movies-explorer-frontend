@@ -2,16 +2,24 @@ import './SearchForm.css'
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 
 import React, {useState} from 'react';
-import {ERROR_SEARCH_FORM} from "../../../constants/constants";
+import {EMPTY_QUERY_SEARCH_FORM_ERROR} from "../../../constants/constants";
+import {useLocation} from "react-router-dom";
 
 
 function SearchForm({onSearch, queryInitialState, shortsOnlyInitialState}) {
-    const [error, setError] = useState(ERROR_SEARCH_FORM);
+    const location = useLocation()
+    const isSavedMoviePage = location.pathname === '/saved-movies'
+    const [error, setError] = useState(() => queryInitialState || isSavedMoviePage ? null : EMPTY_QUERY_SEARCH_FORM_ERROR);
     const [query, setQuery] = useState(queryInitialState)
     const [shortsOnly, setShortsOnly] = useState(shortsOnlyInitialState);
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!query) {
+            setError(EMPTY_QUERY_SEARCH_FORM_ERROR)
+            return
+        }
+        setError(null)
         search(query, shortsOnly)
     };
 
@@ -22,14 +30,13 @@ function SearchForm({onSearch, queryInitialState, shortsOnlyInitialState}) {
 
     const search = (searchQuery, shortsOnly) => {
         if (searchQuery) {
-            setError('');
             onSearch(searchQuery, shortsOnly);
         }
     }
 
     return (
         <section className="search-form">
-            <form className="search-form__form" name="search" onSubmit={handleSubmit}>
+            <form className="search-form__form" name="search" onSubmit={handleSubmit} noValidate>
                 <div className="search-form__bar">
                     <input
                         className="search-form__input"
@@ -44,7 +51,7 @@ function SearchForm({onSearch, queryInitialState, shortsOnlyInitialState}) {
                         Найти
                     </button>
                 </div>
-                {error && <p className="search-form__error">{error}</p>}
+                <span className="search-form__error">{error}</span>
                 <FilterCheckbox onChange={handleShortsCheckboxChange} isChecked={shortsOnly}/>
             </form>
 

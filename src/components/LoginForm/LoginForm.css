@@ -111,6 +111,12 @@
     text-align: center;
 }
 
+.login-form__button:disabled {
+    background-color: #F8F8F8;
+    color: #C2C2C2;
+    opacity: 1;
+}
+
 .login-form__button-description {
     display: flex;
     flex-direction: row;

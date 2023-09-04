@@ -12,6 +12,7 @@ import mainApi from "../../utils/MainApi";
 import CurrentUserContext from "../../context/CurrentUserContext";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import {clearSearchContext, clearUser, loadUser, storeUser} from "../../utils/localStorage";
+import UnauthorizedRoute from "../UnauthorizedRoute/UnauthorizedRoute";
 
 
 function App() {
@@ -102,17 +103,20 @@ function App() {
     useEffect(() => {
         mainApi.getUserInfo().then((data) => {
             setUser(data)
-            mainApi.getUserMovies()
-                .then((data) => {
-                    setSavedMovies(data);
-                })
-                .catch((error) => {
-                    console.error(`Ошибка при загрузке сохраненных фильмов: ${error}`);
-                });
         }).catch(() => {
             unsetUser()
         })
     }, [])
+
+    useEffect(() => {
+        mainApi.getUserMovies()
+            .then((data) => {
+                setSavedMovies(data);
+            })
+            .catch((error) => {
+                console.error(`Ошибка при загрузке сохраненных фильмов: ${error}`);
+            });
+    }, [currentUser])
 
     return (
         <CurrentUserContext.Provider value={currentUser}>
@@ -136,8 +140,10 @@ function App() {
                     <Route
                         path="/profile" element={
                         <ProtectedRoute element={Profile} handleLogout={handleLogout} onUserUpdate={handleUpdateUser}/>}/>
-                    <Route path="/signin" element={<Login handleLogin={handleLogin}/>}/>
-                    <Route path="/signup" element={<Register handleRegister={handleRegister}/>}/>
+                    <Route path="/signin" element={
+                        <UnauthorizedRoute element={Login} handleLogin={handleLogin}/>}/>
+                    <Route path="/signup" element={
+                        <UnauthorizedRoute element={Register} handleRegister={handleRegister}/>}/>
                     <Route path="/*" element={<NotFound/>}></Route>
                 </Routes>
             </div>

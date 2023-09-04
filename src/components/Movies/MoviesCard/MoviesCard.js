@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './MoviesCard.css';
 import {Link, useLocation} from 'react-router-dom';
+import {TWO_COLUMNS_MIN_WIDTH} from "../../../constants/constants";
 
 function formatDuration(duration) {
     const hours = Math.floor(duration / 60);
@@ -30,13 +31,21 @@ function MoviesCard({movie, isLiked, handleMovieLike, handleMovieUnlike}) {
         }
     }
 
-    const cardButtonClassName = `movies-card__like ${
-        isSavedMoviesPage
-            ? 'movies-card__button-delete'
-            : isLiked
-                ? 'movies-card__like_active'
-                : ''
-    } ${isSavedMoviesPage && isHovered ? 'movies-card__button-delete_hover' : ''}`;
+    const deviceSupportsHover = matchMedia('(hover: hover)').matches;
+
+    const cardButtonClassNameForSavedMoviesPage = () => {
+        return `movies-card__like ${(deviceSupportsHover && window.innerWidth >= TWO_COLUMNS_MIN_WIDTH) && !isHovered
+            ? 'movies-card__button-delete_hidden' 
+            : 'movies-card__button-delete_shown'}`
+    }
+
+    const cardButtonClassNameForMoviesPage = () => {
+        return `movies-card__like ${isLiked ? 'movies-card__like_active' : ''}`
+    }
+
+    const cardButtonClassName = isSavedMoviesPage
+        ? cardButtonClassNameForSavedMoviesPage()
+        : cardButtonClassNameForMoviesPage()
 
     return (
         <article

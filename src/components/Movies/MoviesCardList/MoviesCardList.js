@@ -9,20 +9,20 @@ import debounce from "../../../utils/debounce";
 
 function MoviesCardList({movies, likes, isLoading, errorMessage, handleMovieLike, handleMovieUnlike}) {
     const location = useLocation();
-    const [shownMoviesCount, setShownMoviesCount] = useState(() => {
+    function shownMoviesCountInitialValue() {
         const grid = gridParams(window.innerWidth)
         return grid.rows * grid.columns
-    })
+    }
+    const [shownMoviesCount, setShownMoviesCount] = useState(shownMoviesCountInitialValue())
+
+    const showAllMovies = location.pathname === '/saved-movies'
 
     const handleResize = () => {
-        console.log(`resizing to ${window.innerWidth}`)
-        const grid = gridParams(window.innerWidth)
-        setShownMoviesCount(grid.rows * grid.columns)
-        console.log(`set shownMoviesCount to ${grid.rows * grid.columns}`)
+        setShownMoviesCount(shownMoviesCountInitialValue())
     }
 
     useEffect(() => {
-        const debouncedHandleResize =debounce(handleResize,500)
+        const debouncedHandleResize = debounce(handleResize, 500)
         window.addEventListener('resize', debouncedHandleResize)
         return () => {
             window.removeEventListener('resize', debouncedHandleResize)
@@ -46,7 +46,7 @@ function MoviesCardList({movies, likes, isLoading, errorMessage, handleMovieLike
                                 ? ''
                                 : (movies.length === 0
                                         ? <p className="movies-card-list__title">{NOT_FOUND_MESSAGE}</p>
-                                        : movies.slice(0, shownMoviesCount).map((movie) =>
+                                        : (showAllMovies ? movies : movies.slice(0, shownMoviesCount)).map((movie) =>
                                             <MoviesCard
                                                 key={movie.id || movie.movieId}
                                                 movie={movie}

@@ -1,27 +1,11 @@
 import './Register.css'
 import LoginForm from "../LoginForm/LoginForm";
-import {useState} from "react";
-
 
 function Register({handleRegister}) {
 
-    const [formValue, setFormValue] = useState({
-        name: '',
-        email: '',
-        password: ''
-    });
-
-    const handleSubmit = () => {
-        return handleRegister(formValue.name, formValue.email, formValue.password)
+    const handleSubmit = (name, email, password) => {
+        return handleRegister(name, email,password)
     };
-
-    const handleChange = (e) => {
-        const {name, value} = e.target;
-        setFormValue({
-            ...formValue,
-            [name]: value
-        });
-    }
 
     return (
         <main>
@@ -33,8 +17,6 @@ function Register({handleRegister}) {
                            linkWay={'/signin'}
                            onSubmit={handleSubmit}
                            showNameField={true}
-                           values={formValue}
-                           onChange={handleChange}
                 ></LoginForm>
             </section>
         </main>
