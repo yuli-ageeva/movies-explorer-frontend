@@ -1,4 +1,5 @@
 # Верстка fronted-части проекта movies-explorer
+Технологии: CSS, HTML, React, JS, webpack
 
 ссылка на репозиторий https://github.com/yuli-ageeva/movies-explorer-frontend/tree/level-2
 
