@@ -1,15 +1,15 @@
 .save-movies-page {
-  padding-bottom: 162px;
+    padding-bottom: 162px;
 }
 
 @media screen and  (max-width: 780px) {
-  .save-movies-page {
-    padding-bottom: 70px;
-  }
+    .save-movies-page {
+        padding-bottom: 70px;
+    }
 }
 
 @media screen and  (max-width: 400px) {
-  .save-movies-page {
+    .save-movies-page {
 
-  }
+    }
 }

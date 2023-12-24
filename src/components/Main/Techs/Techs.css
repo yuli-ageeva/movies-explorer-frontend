@@ -1,136 +1,136 @@
 .techs {
-  background-color: #F5F5F5;
-  margin: 0;
-  padding: 100px 70px;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 100px 70px;
 }
 
 .techs__title {
-  color: #000;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.88px;
-  border-bottom: 1px solid #000;
-  margin: 0 0 90px;
-  padding-bottom: 23px;
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.88px;
+    border-bottom: 1px solid #000;
+    margin: 0 0 90px;
+    padding-bottom: 23px;
 }
 
 .techs__info {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-  margin: 0 auto 100px;
-  max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    margin: 0 auto 100px;
+    max-width: 600px;
 }
 
 .techs__info-title {
-  color: #000;
-  text-align: center;
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 58px;
-  letter-spacing: -2px;
-  margin: 0;
+    color: #000;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: -2px;
+    margin: 0;
 }
 
 .techs__info-description {
-  color: #000;
-  text-align: center;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: -0.56px;
-  margin: 0 auto;
-  max-width: 460px;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.56px;
+    margin: 0 auto;
+    max-width: 460px;
 }
 
 .techs__types {
-  text-decoration: none;
-  display: grid;
-  margin: 0;
-  gap: 10px;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, 90px);
-  padding: 0;
+    text-decoration: none;
+    display: grid;
+    margin: 0;
+    gap: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 90px);
+    padding: 0;
 }
 
 .techs__type {
-  color: #000;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.56px;
-  border-radius: 10px;
-  background-color: #E8E8E8;
-  padding: 21px 0 22px;
-  list-style: none;
-  text-align: center;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.56px;
+    border-radius: 10px;
+    background-color: #E8E8E8;
+    padding: 21px 0 22px;
+    list-style: none;
+    text-align: center;
 }
 
 @media screen and (max-width: 1070px) {
-  .techs {
-    padding: 90px 50px;
-    background-color: #FFFFFF;
-  }
+    .techs {
+        padding: 90px 50px;
+        background-color: #FFFFFF;
+    }
 
-  .techs__info {
-    gap: 22px;
-    margin-bottom: 84px;
-  }
+    .techs__info {
+        gap: 22px;
+        margin-bottom: 84px;
+    }
 
-  .techs__title {
-    margin: 0 0 80px;
-  }
+    .techs__title {
+        margin: 0 0 80px;
+    }
 
-  .techs__info-description {
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: -0.48px;
-  }
+    .techs__info-description {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: -0.48px;
+    }
 
-  .techs__types {
-    grid-template-columns: repeat(auto-fit, 84px);
-  }
+    .techs__types {
+        grid-template-columns: repeat(auto-fit, 84px);
+    }
 
-  .techs__type {
-    font-size: 12px;
-    letter-spacing: -0.48px;
-  }
+    .techs__type {
+        font-size: 12px;
+        letter-spacing: -0.48px;
+    }
 }
 
 @media screen and (max-width: 635px) {
-  .techs {
-    padding: 67px 18px;
-  }
+    .techs {
+        padding: 67px 18px;
+    }
 
-  .techs__info {
-    gap: 12px;
-    margin-bottom: 50px;
-  }
+    .techs__info {
+        gap: 12px;
+        margin-bottom: 50px;
+    }
 
-  .techs__title {
-    font-size: 18px;
-    letter-spacing: -0.72px;
-    padding-bottom: 27px;
-    margin-bottom: 50px;
-  }
+    .techs__title {
+        font-size: 18px;
+        letter-spacing: -0.72px;
+        padding-bottom: 27px;
+        margin-bottom: 50px;
+    }
 
-  .techs__info-title {
-    font-size: 30px;
-    letter-spacing: -1.2px;
-  }
+    .techs__info-title {
+        font-size: 30px;
+        letter-spacing: -1.2px;
+    }
 
-  .techs__info-description {
-    font-size: 11px;
-    line-height: 16px;
-    letter-spacing: -0.44px;
-  }
+    .techs__info-description {
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: -0.44px;
+    }
 
-  .techs__types {
-    padding: 0 30px;
-  }
+    .techs__types {
+        padding: 0 30px;
+    }
 }
